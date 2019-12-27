@@ -2,8 +2,8 @@
 <layout>
     <row>
         <button icon="power" onTap="tv_power" color="red" />
-        <button icon="up" onTap="page_up" />
-        <button icon="down" onTap="page_down" />
+        <button icon="refresh" onTap="refresh" />
+        <button icon="docclose" onTap="quit_app" />
     </row>
     <row>
         <button icon="vdown" onTap="volume_down" />
@@ -12,8 +12,8 @@
     </row>
     <row>
         <button text="ESC" onTap="key_esc" />
-        <button icon="refresh" onTap="refresh" />
-        <button icon="docclose" onTap="quit_app" />
+        <button text="Chrome" onTap="open_chrome" />
+        <button text="Safari" onTap="open_safari" />
     </row>
     <row>
         <button icon="rwd" onTap="fast_backward" />

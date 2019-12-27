@@ -1,6 +1,7 @@
 -- https://github.com/unifiedremote/Docs/blob/master/libs/http.md
 local http = libs.http;
 local keyboard = libs.keyboard;
+local script = libs.script;
 
 local url = "http://192.168.50.75:7467/";
 local tv_remote = "Samsung_BN59-01179A";
@@ -19,6 +20,10 @@ function sendIrCommand (command)
         print(err);
         print(resp);
     end);
+end
+
+function openApp(app_name)
+    script.apple("tell application \"" .. app_name .. "\" to activate");
 end
 
 --@help Raise TV volume
@@ -73,7 +78,7 @@ end
 --@help Quit current app
 actions.quit_app = function()
     keyboard.stroke("cmd", "q");
-    keyboard.press("esc");
+    keyboard.up("cmd", "q");
 end
 
 --@help Press Option
@@ -89,7 +94,7 @@ end
 --@help Quit current app
 actions.refresh= function()
     keyboard.stroke("cmd", "r");
-    keyboard.press("esc");
+    keyboard.up("cmd", "r");
 end
 
 --@help Page up
@@ -100,4 +105,14 @@ end
 --@help Page down
 actions.page_down = function()
     keyboard.press("pagedown");
+end
+
+--@help Open Safari
+actions.open_safari = function()
+    openApp("Safari");
+end
+
+--@help Open Safari
+actions.open_chrome = function()
+    openApp("/Applications/Google Chrome.app");
 end
