@@ -11,9 +11,9 @@
         <button icon="vup" onTap="volume_up" />
     </row>
     <row>
-        <button text="ESC" onTap="key_esc" />
+        <button text="Esc" onTap="key_esc" />
         <button text="Chrome" onTap="open_chrome" />
-        <button text="Safari" onTap="open_safari" />
+        <button text="Safari" onTap="open_safari" color="green" />
     </row>
     <row>
         <button icon="rwd" onTap="fast_backward" />

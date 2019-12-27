@@ -26,6 +26,10 @@ function openApp(app_name)
     script.apple("tell application \"" .. app_name .. "\" to activate");
 end
 
+function openUrl(browser, url)
+    script.apple("do shell script \"open -a '" .. browser .. "' '" .. url .. "'\"");
+end
+
 --@help Raise TV volume
 actions.volume_up = function ()
     local command = "KEY_VOLUMEUP";
@@ -109,10 +113,10 @@ end
 
 --@help Open Safari
 actions.open_safari = function()
-    openApp("Safari");
+    openUrl("Safari", "http://www.ifun.tv");
 end
 
 --@help Open Safari
 actions.open_chrome = function()
-    openApp("/Applications/Google Chrome.app");
+    openUrl("/Applications/Google Chrome.app", "http://v.qq.com");
 end
