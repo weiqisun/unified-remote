@@ -120,3 +120,17 @@ end
 actions.open_chrome = function()
     openUrl("/Applications/Google Chrome.app", "http://v.qq.com");
 end
+
+--@help Sleep
+actions.sleep = function()
+    script.apple(
+        "tell application \"System Events\"",
+            "start current screen saver",
+        "end tell"
+    );
+end
+
+--@help Unlock screen
+actions.unlock = function()
+    script.shell("/usr/bin/osascript /Users/Snflow/.credentials/unlock_screen.scpt");
+end

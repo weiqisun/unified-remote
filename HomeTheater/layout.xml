@@ -6,6 +6,10 @@
         <button icon="docclose" onTap="quit_app" />
     </row>
     <row>
+        <button icon="lock" onTap="sleep" />
+        <button icon="unlock" onTap="unlock" />
+    </row>
+    <row>
         <button icon="vdown" onTap="volume_down" />
         <button icon="vmute" onTap="volume_mute" />
         <button icon="vup" onTap="volume_up" />
