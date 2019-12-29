@@ -125,7 +125,9 @@ end
 actions.sleep = function()
     script.apple(
         "tell application \"System Events\"",
-            "start current screen saver",
+            "if ((get name of every process) does not contain \"ScreenSaverEngine\") then",
+                "start current screen saver",
+            "end if",
         "end tell"
     );
 end
