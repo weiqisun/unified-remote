@@ -113,12 +113,17 @@ end
 
 --@help Open Safari
 actions.open_safari = function()
-    openUrl("Safari", "http://www.ifun.tv");
+    openUrl("Safari", "https://www.ifun.tv");
 end
 
---@help Open Safari
+--@help Open Chrome
 actions.open_chrome = function()
     openUrl("/Applications/Google Chrome.app", "http://v.qq.com");
+end
+
+--@help Open Firefox
+actions.open_firefox = function()
+    openUrl("Firefox", "http://v.qq.com");
 end
 
 --@help Sleep

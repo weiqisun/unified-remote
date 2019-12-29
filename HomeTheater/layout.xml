@@ -16,7 +16,7 @@
     </row>
     <row>
         <button text="Esc" onTap="key_esc" color="green"/>
-        <button text="Chrome" onTap="open_chrome" />
+        <button text="Firefox" onTap="open_firefox" />
         <button text="Safari" onTap="open_safari" color="green" />
     </row>
     <row>
